@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,700&display=swap');
+
+
+html{
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.h1 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: large;
+    text-align: center;
+    color: #004047;}
+.h2{
+    font-family: "Playfair Display", sans-serif;
+    font-size: small;
+    text-align: center;
+    color: rgb(#004047);
+}
+.h3{
+    font-family: "Playfair Display", sans-serif;
+    font-size: small;
+    text-align: center;
+    color: rgb(#004047);
+}
+.h4{
+    font-family: "Playfair Display", sans-serif;
+    font-size: small;
+    text-align: center;
+    color: rgb(#004047);
+}
+.header {
+    border-radius: 80px;
+    background: rgba(255, 255, 255, 0.703);
+    margin:1rem;
+    padding:0rem;
+    border:0px solid rgb(255, 255, 255);
+    padding: 0.5rem;
+    font-family:"Playfair Display", sans-serif;
+}
+
+
+
+.header ul{
+    margin: 0px;
+    padding: 10;
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    flex-wrap: nowrap;
+}
+
+.header a{
+    text-decoration: none;
+    color: #004047;
+    
+}
+.header a:visited{
+    color: #004047;
+}
+
+.header .spacer{
+    flex-grow: 2;
+}
+.header li{
+    list-style-type: none;
+flex-grow: 1;
+flex-basis: 0;
+text-align: start;
+
+}
+
+
+
+
+
+
+
+
+.layout {
+    width: 888px;
+    margin: 0 auto; /* 전체 중앙 정렬 */
+    padding: 20px;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column; /* 수직으로 섹션 정렬 */
+    align-items: center; /* 섹션 중앙 정렬 */
+}
+
+.work, .work2, .work3 {
+    display: grid; /* 그리드 레이아웃 */
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열 */
+    gap: 20px; /* 아이템 간 간격 */
+    margin-bottom: 30px; /* 섹션 간 여백 */
+}
+
+.item {
+    display: flex;
+    flex-direction: column; /* 이미지를 위에, 텍스트 아래로 배치 */
+    align-items: center; /* 이미지를 중앙 정렬 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    position: relative; /* To enable the background overlay */
+    padding: 20px; /* Add padding around the content */
+}
+
+.item::before {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(211, 211, 211, 0.432); /* Semi-transparent black background */
+    z-index: -1; /* Place the background behind the content */
+    border-radius: 10px; /* Optionally add rounded corners */
+}
+
+.item img {
+    width: 100%; /* 이미지가 부모 요소 너비에 맞게 확장 */
+    height: auto; /* 비율 유지 */
+    object-fit: contain; /* 이미지가 잘리지 않도록 비율을 유지하며 컨테이너 안에 맞춤 */
+    margin-bottom: 10px; /* 이미지와 텍스트 간격 */
+}
+
+.item h2, .item h3, .item h4 {
+    font-size: 1rem;
+    line-height: 1.4; /* 텍스트 간격 */
+    margin: 0; /* 여백 없애기 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+ 
+   /* 전체 화면 크기 조정 */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+.center-container {
+    display: grid;
+    place-items: center; /* 가로 및 세로 중앙 정렬 */
+    height: 100vh;
+}
+.workux{display: grid; }
+.workux2{display: grid; }
+
+.center-container{box-sizing: border-box} 
+/* 전체 화면 크기 조정 */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;  /* 최소 높이 설정 */
+    overflow-y: auto;   /* 필요한 경우에만 세로 스크롤 표시 */
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 비디오 배경 스타일 */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/* 콘텐츠 스타일 */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
